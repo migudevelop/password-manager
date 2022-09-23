@@ -9,11 +9,15 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-i18next": "^10.12.5",
-    "react-scripts": "3.1.1"
+    "react-scripts": "3.1.1",
+    "styled-components": "^5.3.5"
   },
   "scripts": {
     "start": "react-scripts start",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "prettify": "prettier . --write",
+    "prettier:check": "prettier . --check",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -31,6 +35,16 @@
     ]
   },
   "devDependencies": {
-    "babel-plugin-transform-class-properties": "^6.24.1"
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "husky": "^8.0.1",
+    "lint-staged": "^12.3.8",
+    "prettier": "^2.7.1"
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts,jsx,tsx}": [
+      "prettier --write"
+    ]
   }
 }
