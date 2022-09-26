@@ -11,11 +11,17 @@
       "@assets/*": [
         "./src/assets/*"
       ],
-      "@components/*": [
-        "./src/components/*"
-      ],
       "@models/*": [
         "./src/models/*"
+      ],
+      "@redux/*": [
+        "./src/redux/*"
+      ],
+      "@shared/*": [
+        "./src/shared/*"
+      ],
+      "@styles/*": [
+        "./src/styles/*"
       ],
     },
     "jsx": "react-jsx",
