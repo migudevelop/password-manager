@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
       "@src/*": [
@@ -19,6 +18,7 @@
         "./src/models/*"
       ],
     },
+    "jsx": "react-jsx",
     "resolveJsonModule": true,
     "outDir": "./build",
     "esModuleInterop": true,
@@ -41,7 +41,6 @@
     "module": "esnext",
     "moduleResolution": "node",
     "isolatedModules": true,
-    "noEmit": true
   },
   "include": [
     "src/**/*"
