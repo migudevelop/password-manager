@@ -1,5 +1,5 @@
 import { FC, PropsWithChildren, memo } from 'react'
-import { Header } from '@components/index'
+import { Header } from '@shared/components/index'
 
 const Layout: FC<PropsWithChildren> = ({ children }) => {
   return (

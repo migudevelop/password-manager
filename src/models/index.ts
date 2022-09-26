@@ -1,1 +1,3 @@
-export * from './components/shared/Button'
+export * from './shared/components'
+export * from './styles'
+export * from './redux'
