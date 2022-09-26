@@ -1,12 +1,12 @@
-import { PropsWithChildren } from 'react'
 import PropTypes, { InferProps } from 'prop-types'
 
 export const ButtonPropTypes = {
+  text: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
-  disabled: PropTypes.bool.isRequired,
-  className: PropTypes.oneOf(['primary', 'secondary', 'terciary']).isRequired
+  disabled: PropTypes.bool,
+  className: PropTypes.oneOf(['primary', 'secondary', 'terciary'])
 }
 
-export type ButtonStyledProps = InferProps<typeof ButtonPropTypes>
+export type ButtonProps = InferProps<typeof ButtonPropTypes>
 
-export type ButtonProps = PropsWithChildren & ButtonStyledProps
+export type ButtonStyledProps = any

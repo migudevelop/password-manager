@@ -1,12 +1,10 @@
 const path = require('path')
-// const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-// const HtmlWebPackPlugin = require('html-webpack-plugin')
+const HtmlWebPackPlugin = require('html-webpack-plugin')
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
-// const htmlWebpackPlugin = new HtmlWebPackPlugin({
-//   inject: false,
-//   template: './public/index.html',
-//   filename: './index.html'
-// })
+const htmlWebpackPlugin = new HtmlWebPackPlugin({
+  template: './public/index.html',
+  filename: './index.html'
+})
 
 module.exports = (_env, { mode }) => {
   const fileNameWithHash =
@@ -42,11 +40,20 @@ module.exports = (_env, { mode }) => {
               })
             ]
           }
+        },
+        {
+          test: /\.(svg|gif|png|jpg|jpeg|ico)$/i,
+          loader: 'file-loader',
+          options: {
+            outputPath: 'static/media/images',
+            name: `${fileNameWithHash}.[ext]`
+          }
         }
       ]
     },
     resolve: {
       modules: [path.resolve('./src'), path.resolve('./node_modules')]
-    }
+    },
+    plugins: [htmlWebpackPlugin]
   }
 }
