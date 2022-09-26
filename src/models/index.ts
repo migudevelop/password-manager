@@ -1,1 +1,1 @@
-export * from './components/shared/Button.d'
+export * from './components/shared/Button'
