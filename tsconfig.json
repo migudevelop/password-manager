@@ -1,13 +1,22 @@
 {
   "compilerOptions": {
     "jsx": "react-jsx",
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "paths": {
       "@src/*": [
-        "*"
+        "./src/*"
+      ],
+      "@app/*": [
+        "./src/app/*"
+      ],
+      "@assets/*": [
+        "./src/assets/*"
       ],
       "@components/*": [
         "./src/components/*"
+      ],
+      "@models/*": [
+        "./src/models/*"
       ],
     },
     "resolveJsonModule": true,
@@ -21,6 +30,18 @@
     "noImplicitReturns": false,
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
+    "target": "ES2022",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "noEmit": true
   },
   "include": [
     "src/**/*"
