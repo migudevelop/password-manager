@@ -12,9 +12,3 @@ export const FooterWrapper = styled.footer`
     padding: 1rem 20rem;
   }
 `
-
-export const FooterSectionStyled = styled.section`
-  display: flex;
-  justify-content: space-between;
-  flex-grow: 1;
-`
