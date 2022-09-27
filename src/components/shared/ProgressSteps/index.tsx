@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { memo, FC } from 'react'
 import { StepItem } from '@components/index'
 import {
   ProgressStepsWrapper,
@@ -22,4 +22,4 @@ ProgressSteps.defaultProps = {
   maxSteps: 3
 }
 
-export default ProgressSteps
+export default memo(ProgressSteps)
