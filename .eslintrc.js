@@ -29,6 +29,7 @@ module.exports = {
   rules: {
     'react/react-in-jsx-scope': RULES.OFF,
     '@typescript-eslint/no-invalid-void-type': RULES.OFF,
+    '@typescript-eslint/strict-boolean-expressions': RULES.OFF,
     'prettier/prettier': ['error', { endOfLine: 'auto' }]
   }
 }

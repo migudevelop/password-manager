@@ -1,10 +1,12 @@
 import { FC, PropsWithChildren, memo } from 'react'
-import { Header } from '@shared/components/index'
+import { Header, ProgressSteps } from '@shared/components/index'
 
 const Layout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <>
-      <Header />
+      <Header>
+        <ProgressSteps />
+      </Header>
       <main>{children}</main>
     </>
   )

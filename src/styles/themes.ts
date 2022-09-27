@@ -15,5 +15,5 @@ export const LIGHT_THEME: Theme = {
   primaryColor: '#FF0049',
   secondaryColor: '#002B45',
   terciaryColor: '#FFF1E5',
-  headerBackgroundColor: '#c0c0c0'
+  headerBackgroundColor: '#D3D3D3'
 }
