@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { ThemeProvider } from 'styled-components'
-import GlobalStyle from '../styles/GlobalStyle'
-import { useAppState } from '@shared/hooks'
+import GlobalStyle from '@styles/GlobalStyle'
+import { useAppState } from '@hooks/index'
 import ProductInformation from './views/ProductInformation'
 
 const App: FC = () => {

@@ -1,5 +1,5 @@
 import { memo, FC } from 'react'
-import { Layout, MainSection } from '@shared/components'
+import { Layout, MainSection } from '@components/index'
 
 const ProductInformation: FC = () => {
   return (

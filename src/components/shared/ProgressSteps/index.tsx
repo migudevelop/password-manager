@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { StepItem } from '@shared/components'
+import { StepItem } from '@components/index'
 import {
   ProgressStepsWrapper,
   ProgressStepsStyled

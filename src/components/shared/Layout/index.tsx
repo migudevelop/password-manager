@@ -1,5 +1,5 @@
 import { FC, PropsWithChildren, memo } from 'react'
-import { Header, ProgressSteps } from '@shared/components/index'
+import { Header, ProgressSteps } from '@components/index'
 
 const Layout: FC<PropsWithChildren> = ({ children }) => {
   return (
