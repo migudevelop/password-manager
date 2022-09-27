@@ -1,8 +1,15 @@
-import { FC, PropsWithChildren, memo } from 'react'
-import { FooterStyled } from './Footer.styled'
-
-const Header: FC<PropsWithChildren> = ({ children }) => {
-  return <FooterStyled>{children}</FooterStyled>
+import { FC, memo } from 'react'
+import { FooterWrapper, FooterSectionStyled } from './Footer.styled'
+import { Button } from '@components/index'
+const Footer: FC = () => {
+  return (
+    <FooterWrapper>
+      <FooterSectionStyled>
+        <Button className="terciary" text="Cancel" onClick={() => {}} />
+        <Button className="secondary" text="Seguiente" onClick={() => {}} />
+      </FooterSectionStyled>
+    </FooterWrapper>
+  )
 }
 
-export default memo(Header)
+export default memo(Footer)

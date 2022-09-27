@@ -1,5 +1,5 @@
 import { FC, PropsWithChildren, memo } from 'react'
-import { Header, ProgressSteps } from '@components/index'
+import { Header, ProgressSteps, Footer } from '@components/index'
 
 const Layout: FC<PropsWithChildren> = ({ children }) => {
   return (
@@ -8,6 +8,7 @@ const Layout: FC<PropsWithChildren> = ({ children }) => {
         <ProgressSteps />
       </Header>
       <main>{children}</main>
+      <Footer />
     </>
   )
 }

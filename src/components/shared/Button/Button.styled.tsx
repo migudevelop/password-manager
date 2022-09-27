@@ -2,20 +2,20 @@ import styled, { css } from 'styled-components'
 import { ButtonStyledProps } from '@models/index'
 
 const primaryClass = css`
-  .primary {
+  &.primary {
     background: ${({ theme }) => theme.primaryColor};
     color: ${({ theme }) => theme.terciaryColor};
   }
 `
 const secondaryClass = css`
-  .secondary {
+  &.secondary {
     background: ${({ theme }) => theme.secondaryColor};
     color: ${({ theme }) => theme.terciaryColor};
   }
 `
 
 const terciaryClass = css`
-  .terciary {
+  &.terciary {
     background: ${({ theme }) => theme.terciaryColor};
     color: ${({ theme }) => theme.secondaryColor};
   }
@@ -24,11 +24,11 @@ const terciaryClass = css`
 export const ButtonStyled = styled.button<ButtonStyledProps>`
   text-align: center;
   font-size: 1rem;
+  font-weight: bold;
   padding: 10px;
   border: none;
-  transition: color 0.3s ease 0s, background 0.3s ease 0s;
   border-radius: 3px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   cursor: pointer;
   ${primaryClass}
   ${secondaryClass}

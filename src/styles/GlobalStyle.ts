@@ -9,7 +9,14 @@ const GlobalStyle = createGlobalStyle`
 		width: 100vw;
 		height: 100vh;
 		background: ${({ theme }: ThemeInitialState) => theme.backgroundColor};
+		#root{
+			height: 100%;
+			display: flex;
+  			flex-direction: column;
+  			align-items: stretch;
+		}
 		main{
+			flex-grow: 1;
 			overflow-y: auto;
 			margin: 0 2.5rem;
 			${MEDIAQUERIES.tablet} {
@@ -18,6 +25,9 @@ const GlobalStyle = createGlobalStyle`
 			${MEDIAQUERIES.desktop} {
 				margin: 0 20rem;
 			}
+		}
+		header, main, footer {
+			flex-shrink: 0;
 		}
 	}
 `
