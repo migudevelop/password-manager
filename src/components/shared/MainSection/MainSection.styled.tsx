@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { MEDIAQUERIES } from '@styles/helpers'
 
 export const MainSectionWrapper = styled.section`
   display: flex;
@@ -7,5 +8,10 @@ export const MainSectionWrapper = styled.section`
 `
 
 export const TitleStyled = styled.h1`
+  font-size: 2rem;
+  text-align: center;
   color: ${({ theme }) => theme.secondaryColor};
+  ${MEDIAQUERIES.tablet} {
+    text-align: justify;
+  }
 `

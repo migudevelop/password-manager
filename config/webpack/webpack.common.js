@@ -48,6 +48,14 @@ module.exports = (_env, { mode }) => {
             outputPath: 'static/media/images',
             name: `${fileNameWithHash}.[ext]`
           }
+        },
+        {
+          test: /\.(woff2?|ttf|eot)$/i,
+          loader: 'file-loader',
+          options: {
+            outputPath: 'static/media/fonts',
+            name: `${fileNameWithHash}.[ext]`
+          }
         }
       ]
     },

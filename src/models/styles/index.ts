@@ -4,5 +4,11 @@ export interface Theme {
   primaryColor: string
   secondaryColor: string
   terciaryColor: string
-  headerBackgroundColor: string
+  secondaryBackgroundColor: string
+}
+
+export interface MediaQueries {
+  mobile: string
+  tablet: string
+  desktop: string
 }

@@ -5,8 +5,8 @@ export const DARK_THEME: Theme = {
   backgroundColor: '#000000',
   primaryColor: '#FF0049',
   secondaryColor: '#002B45',
-  terciaryColor: '#FFF1E5',
-  headerBackgroundColor: '#c0c0c0'
+  terciaryColor: '#dcdcdc',
+  secondaryBackgroundColor: '#cbd5da'
 }
 
 export const LIGHT_THEME: Theme = {
@@ -14,6 +14,6 @@ export const LIGHT_THEME: Theme = {
   backgroundColor: '#FFFFFF',
   primaryColor: '#FF0049',
   secondaryColor: '#002B45',
-  terciaryColor: '#FFF1E5',
-  headerBackgroundColor: '#D3D3D3'
+  terciaryColor: '#dcdcdc',
+  secondaryBackgroundColor: '#cbd5da'
 }
