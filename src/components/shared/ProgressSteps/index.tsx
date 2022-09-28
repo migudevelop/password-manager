@@ -1,6 +1,6 @@
 import { memo, FC } from 'react'
-import { StepItem } from '@components/index'
-import { ProgressStepsProps } from '@models/index'
+import { StepItem, SvgCheck } from '@components/index'
+import { ProgressStepsProps, StepState } from '@models/index'
 import { obtainedStepState } from '@shared/helpers/utils'
 import {
   ProgressStepsWrapper,
@@ -12,11 +12,15 @@ const ProgressSteps: FC<ProgressStepsProps> = ({ currentStep, maxSteps }) => {
   return (
     <ProgressStepsWrapper>
       <ProgressStepsStyled>
-        {stepsArray.map((_, i) => (
-          <StepItem key={i} stepState={obtainedStepState(i, currentStep)}>
-            {i + 1}
-          </StepItem>
-        ))}
+        {stepsArray.map((_, i) => {
+          const step = i + 1
+          const stepState = obtainedStepState(step, currentStep)
+          return (
+            <StepItem key={i} stepState={stepState}>
+              {stepState === StepState.COMPLETED ? <SvgCheck /> : i + 1}
+            </StepItem>
+          )
+        })}
       </ProgressStepsStyled>
     </ProgressStepsWrapper>
   )

@@ -46,6 +46,9 @@ export const StepLabelStyled = styled.span<StepItemProps>`
   align-items: center;
   justify-content: center;
   user-select: none;
+  fill {
+    ${({ theme }) => theme.backgroundColor};
+  }
   &::before {
     content: '';
     position: absolute;
