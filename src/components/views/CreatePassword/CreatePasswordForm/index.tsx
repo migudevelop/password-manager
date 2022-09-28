@@ -15,7 +15,7 @@ const CreatePasswordForm: FC = () => {
   const { password: passwordError, repeatedPassword: repeatedPasswordError } =
     errors
   return (
-    <form onSubmit={handleSubmit(handleSubmit((e) => console.log({ e })))}>
+    <form onSubmit={handleSubmit((e) => console.log({ e }))}>
       <TextArticle contentText={t('instructions.firstText')} />
       <PasswordsFormWrapper>
         <FormInput
