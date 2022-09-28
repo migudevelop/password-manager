@@ -34,6 +34,7 @@ module.exports = {
         checksVoidReturn: false
       }
     ],
+    '@typescript-eslint/restrict-template-expressions': RULES.OFF,
     '@typescript-eslint/no-floating-promises': RULES.OFF,
     '@typescript-eslint/no-invalid-void-type': RULES.OFF,
     '@typescript-eslint/strict-boolean-expressions': RULES.OFF,

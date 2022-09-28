@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components'
+import styled, { css, ThemeProps } from 'styled-components'
+import { StepItemProps, StepState } from '@models/index'
 
 export const StepItemStyled = styled.li`
   list-style: none;
@@ -9,28 +10,36 @@ export const StepItemStyled = styled.li`
 `
 
 const StepLabelBackground = css`
-  ${({ theme }) => {
-    const stepState: string = 'CURRENT'
+  ${({ theme, stepState }: ThemeProps<any> & StepItemProps) => {
+    const commonSize = `height: 2rem; width: 2rem;`
     switch (stepState) {
-      case 'COMPLETED': {
-        return theme.primaryColor
+      case StepState.COMPLETED: {
+        return `${commonSize}; background-color: ${theme.primaryColor}`
       }
-      case 'CURRENT': {
-        return theme.secondaryColor
+      case StepState.CURRENT: {
+        return `height: 2.5rem; width: 2.5rem; background-color: ${theme.secondaryColor}`
       }
       default: {
-        return theme.terciaryColor
+        return `${commonSize}; background-color: ${theme.terciaryColor}`
       }
     }
   }};
 `
 
-export const StepLabelStyled = styled.span`
-  background-color: ${StepLabelBackground};
+const StepAfterLabelBackground = css`
+  ${({ theme, stepState }: ThemeProps<any> & StepItemProps) => {
+    if (stepState === StepState.NOT_STATE) {
+      return theme.terciaryColor
+    }
+    return theme.primaryColor
+  }};
+`
+
+export const StepLabelStyled = styled.span<StepItemProps>`
+  ${StepLabelBackground};
   color: ${({ theme }) => theme.backgroundColor};
+  box-shadow: 0px 0px 6px -2px rgb(0 0 0 / 60%);
   border-radius: 50%;
-  height: 2.5rem;
-  width: 2.5rem;
   line-height: 2.5rem;
   display: inline-flex;
   transform-origin: center;
@@ -46,7 +55,7 @@ export const StepLabelStyled = styled.span`
     right: 50%;
     transform: translateY(-50%);
     z-index: -1;
-    background: ${({ theme }) => theme.secondaryColor};
+    background: ${StepAfterLabelBackground};
     background-size: 200% 100%;
     background-position: right bottom;
     transition: background-position 200ms ease-in-out;

@@ -1,17 +1,22 @@
 import { memo, FC } from 'react'
 import { StepItem } from '@components/index'
+import { ProgressStepsProps } from '@models/index'
+import { obtainedStepState } from '@shared/helpers/utils'
 import {
   ProgressStepsWrapper,
   ProgressStepsStyled
 } from './ProgressSteps.styled'
 
-const ProgressSteps: FC = () => {
+const ProgressSteps: FC<ProgressStepsProps> = ({ currentStep, maxSteps }) => {
+  const stepsArray = Array?.from({ length: maxSteps })
   return (
     <ProgressStepsWrapper>
       <ProgressStepsStyled>
-        <StepItem>1</StepItem>
-        <StepItem>2</StepItem>
-        <StepItem>3</StepItem>
+        {stepsArray.map((_, i) => (
+          <StepItem key={i} stepState={obtainedStepState(i, currentStep)}>
+            {i + 1}
+          </StepItem>
+        ))}
       </ProgressStepsStyled>
     </ProgressStepsWrapper>
   )
