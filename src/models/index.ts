@@ -1,3 +1,4 @@
+export * from './components/form'
 export * from './components/shared'
 export * from './components/views'
 export * from './styles'

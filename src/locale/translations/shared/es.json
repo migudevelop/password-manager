@@ -1,6 +1,12 @@
 {
   "shared": {
     "btnCancel": "Cancelar",
-    "btnNext": "Siguiente"
+    "btnNext": "Siguiente",
+    "error": {
+      "isRequired": "{name} is required",
+      "minLength": "{name} does not have the minimum length",
+      "notValidFormat": "{name} does not have a valid format",
+      "notPassedTheValidation": "{name} has not passed the validation"
+    }
   }
 }

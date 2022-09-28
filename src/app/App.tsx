@@ -3,13 +3,15 @@ import { ThemeProvider } from 'styled-components'
 import GlobalStyle from '@styles/GlobalStyle'
 import { useAppState } from '@hooks/index'
 import ProductInformation from './views/ProductInformation'
+import Form from './views/Form'
 
 const App: FC = () => {
   const { state } = useAppState()
   return (
     <ThemeProvider theme={state?.theme?.theme}>
       <GlobalStyle />
-      <ProductInformation />
+      {state?.app?.currentStep === 1 && <ProductInformation />}
+      {state?.app?.currentStep === 2 && <Form />}
     </ThemeProvider>
   )
 }

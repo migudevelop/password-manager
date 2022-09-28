@@ -3,10 +3,12 @@ import { createSlice } from '@reduxjs/toolkit'
 import { appReducers } from '@redux/reducers'
 
 const initialState: AppInitialState = {
-  currentStep: 1,
-  password: '',
-  repeatedPassword: '',
-  secretHelpText: ''
+  currentStep: 2,
+  formValues: {
+    password: '',
+    repeatedPassword: '',
+    secretHelpText: ''
+  }
 }
 
 const appSlicer = createSlice({
