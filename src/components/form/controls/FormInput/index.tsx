@@ -10,11 +10,14 @@ const FormInput: FC<FormInputProps> = ({
   type,
   autoFocus,
   error,
-  defaultValue
+  defaultValue,
+  register,
+  validation
 }) => (
   <FormGroup name={name} label={label} error={error}>
     <InputStyled
       type={type}
+      {...register(name, validation)}
       placeholder={placeholder}
       autoFocus={autoFocus}
       defaultValue={defaultValue}
@@ -29,8 +32,8 @@ FormInput.defaultProps = {
   placeholder: '',
   type: 'text',
   autoFocus: false,
-  error: {},
-  defaultValue: ''
+  defaultValue: '',
+  validation: {}
 }
 
 export default memo(FormInput)

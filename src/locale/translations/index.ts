@@ -1,10 +1,10 @@
-import form from './Form'
+import createPassword from './CreatePassword'
 import productInformation from './ProductInformation'
 import shared from './shared'
 
 export default {
   es: {
-    ...form.es,
+    ...createPassword.es,
     ...productInformation.es,
     ...shared.es
   }

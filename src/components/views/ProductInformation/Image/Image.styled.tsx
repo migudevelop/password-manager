@@ -7,7 +7,6 @@ export const FigureStyled = styled.figure`
   flex-flow: column;
   justify-content: center;
   margin-bottom: 2.5rem;
-  justify-content: center;
   ${MEDIAQUERIES.tablet} {
     margin-bottom: 0.5rem;
   }

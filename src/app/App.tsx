@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components'
 import GlobalStyle from '@styles/GlobalStyle'
 import { useAppState } from '@hooks/index'
 import ProductInformation from './views/ProductInformation'
-import Form from './views/Form'
+import Form from './views/CreatePassword'
 
 const App: FC = () => {
   const { state } = useAppState()

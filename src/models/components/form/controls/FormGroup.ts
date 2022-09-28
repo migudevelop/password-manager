@@ -1,4 +1,5 @@
 import PropTypes, { InferProps } from 'prop-types'
+import { FieldError, FieldErrorsImpl, Merge } from 'react-hook-form'
 
 export const FormGroupPropTypes = {
   label: PropTypes.string,
@@ -6,8 +7,10 @@ export const FormGroupPropTypes = {
   error: PropTypes.shape({
     type: PropTypes.string,
     message: PropTypes.string
-  }).isRequired,
+  }),
   children: PropTypes.node.isRequired
 }
 
-export type FormGroupProps = InferProps<typeof FormGroupPropTypes>
+export type FormGroupProps = InferProps<typeof FormGroupPropTypes> & {
+  error?: FieldError | Merge<FieldError, FieldErrorsImpl<any>> | undefined
+}
