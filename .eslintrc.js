@@ -28,6 +28,12 @@ module.exports = {
   plugins: ['react', 'prettier'],
   rules: {
     'react/react-in-jsx-scope': RULES.OFF,
+    '@typescript-eslint/no-misused-promises': [
+      RULES.ERROR,
+      {
+        checksVoidReturn: false
+      }
+    ],
     '@typescript-eslint/no-floating-promises': RULES.OFF,
     '@typescript-eslint/no-invalid-void-type': RULES.OFF,
     '@typescript-eslint/strict-boolean-expressions': RULES.OFF,

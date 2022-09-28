@@ -1,6 +1,8 @@
 export interface AppInitialState {
   currentStep: number
-  password: string
-  repeatedPassword: string
-  secretHelpText: string
+  formValues: {
+    password: string
+    repeatedPassword: string
+    secretHelpText: string
+  }
 }

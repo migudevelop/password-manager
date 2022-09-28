@@ -7,7 +7,11 @@ const MainFooterSection: FC = () => {
   const { t } = useTranslation('shared')
   return (
     <MainFooterSectionStyled>
-      <Button className="terciary" text={t('btnCancel')} onClick={() => {}} />
+      <Button
+        className="emtpy-background"
+        text={t('btnCancel')}
+        onClick={() => {}}
+      />
       <Button className="secondary" text={t('btnNext')} onClick={() => {}} />
     </MainFooterSectionStyled>
   )

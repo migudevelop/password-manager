@@ -21,6 +21,12 @@ const terciaryClass = css`
   }
 `
 
+const emptyBackgroundClass = css`
+  &.emtpy-background {
+    background: transparent;
+  }
+`
+
 export const ButtonStyled = styled.button<ButtonStyledProps>`
   text-align: center;
   font-size: 1rem;
@@ -33,6 +39,7 @@ export const ButtonStyled = styled.button<ButtonStyledProps>`
   ${primaryClass}
   ${secondaryClass}
   ${terciaryClass}
+  ${emptyBackgroundClass}
   :focus {
     outline: 0;
   }
