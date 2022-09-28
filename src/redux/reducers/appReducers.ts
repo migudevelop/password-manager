@@ -1,13 +1,15 @@
 import { PayloadAction } from '@reduxjs/toolkit'
+import { initialState } from '@redux/slicers/appSlicer'
 
 export default {
-  nextStep: (state) => {
-    const { currentStep } = state
-    return { ...state, currentStep }
+  resetSteps: (state) => {
+    state.currentStep = 1
+    state.formValues = { ...initialState.formValues }
   },
-  prevStep: (state) => {
-    const { currentStep } = state
-    return { ...state, currentStep }
+  nextStep: (state) => {
+    if (state.currentStep <= state.maxSteps) {
+      state.currentStep++
+    }
   },
   chagePassword: (state, action: PayloadAction<string>) => {
     const { payload = '' } = action

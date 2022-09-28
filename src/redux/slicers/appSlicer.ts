@@ -2,8 +2,9 @@ import { AppInitialState } from '@src/models/index'
 import { createSlice } from '@reduxjs/toolkit'
 import { appReducers } from '@redux/reducers'
 
-const initialState: AppInitialState = {
+export const initialState: AppInitialState = {
   currentStep: 2,
+  maxSteps: 3,
   formValues: {
     password: '',
     repeatedPassword: '',
