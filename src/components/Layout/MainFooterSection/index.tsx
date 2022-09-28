@@ -1,12 +1,14 @@
 import { FC, memo } from 'react'
 import { MainFooterSectionStyled } from './MainFooterSection.styled'
+import { useTranslation } from 'react-i18next'
 import { Button } from '@components/index'
 
 const MainFooterSection: FC = () => {
+  const { t } = useTranslation('shared')
   return (
     <MainFooterSectionStyled>
-      <Button className="terciary" text="Cancel" onClick={() => {}} />
-      <Button className="secondary" text="Seguiente" onClick={() => {}} />
+      <Button className="terciary" text={t('btnCancel')} onClick={() => {}} />
+      <Button className="secondary" text={t('btnNext')} onClick={() => {}} />
     </MainFooterSectionStyled>
   )
 }

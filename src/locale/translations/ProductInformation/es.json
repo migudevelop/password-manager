@@ -1,0 +1,19 @@
+{
+  "productInformation": {
+    "title": "Crea tu Password Manager",
+    "gearHead": {
+      "text": "Guarda aquí todas tus contraseñas, datos o cualquier información, olvida las notas de papel y las aplicaciones no protegidas."
+    },
+    "secureBox": {
+      "text": "Guarda aquí todas tus contraseñas, datos o cualquier información, olvida las notas de papel y las aplicaciones no protegidas."
+    },
+    "howWork": {
+      "title": "Cómo funciona",
+      "contentText": "En primer lugar debes crear una contraseña diferente para sus pertenencias electrónicas. No podrás recuperar tu contraseña, así que recuérdala bien."
+    },
+    "dataToSave": {
+      "title": "Qué datos puedes guardar",
+      "contentText": "Por ejemplo, el número de tu tarjeta, el PIN y el PUK de tu teléfono móvil, el número de serie de alguno de tus dispositivos o cualquier información que necesites tener en lugar seguro"
+    }
+  }
+}

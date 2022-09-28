@@ -3,7 +3,7 @@ import shared from './shared'
 
 export default {
   es: {
-    ...productInformation.es,
-    ...shared.es
+    ...shared.es,
+    ...productInformation.es
   }
 }

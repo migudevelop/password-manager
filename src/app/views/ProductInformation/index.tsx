@@ -1,4 +1,5 @@
 import { memo, FC } from 'react'
+import { useTranslation } from 'react-i18next'
 import {
   Layout,
   MainSection,
@@ -7,17 +8,18 @@ import {
 } from '@components/index'
 
 const ProductInformation: FC = () => {
+  const { t } = useTranslation('productInformation')
   return (
     <Layout>
-      <MainSection title="Crea tu Password Manager">
+      <MainSection title={t('title')}>
         <ImagesSection />
         <TextArticle
-          title="Cómo funciona"
-          contentText="En primer lugar debes crear una contraseña diferente para sus pertenencias electrónicas. No podrás recuperar tu contraseña, así que recuérdala bien."
+          title={t('howWork.title')}
+          contentText={t('howWork.contentText')}
         />
         <TextArticle
-          title="Qué datos puedes guardar"
-          contentText="Por ejemplo, el número de tu tarjeta, el PIN y el PUK de tu teléfono móvil, el número de serie de alguno de tus dispositivos o cualquier información que necesites tener en lugar seguro"
+          title={t('dataToSave.title')}
+          contentText={t('dataToSave.contentText')}
         />
       </MainSection>
     </Layout>
