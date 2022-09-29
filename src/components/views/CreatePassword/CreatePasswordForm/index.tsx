@@ -1,21 +1,32 @@
-import { memo, FC } from 'react'
+import { memo, FC, useEffect } from 'react'
 import { FormInput, TextArticle } from '@components/index'
 import { useForm } from 'react-hook-form'
 import { useTranslation } from 'react-i18next'
 import { PASSWORD_VALIDATION } from '@shared/helpers/formValidation'
 import { PasswordsFormWrapper } from './CreatePasswordForm.styled'
+import { useAppState } from '@src/hooks'
 
 const CreatePasswordForm: FC = () => {
   const { t } = useTranslation('createPassword')
+  const { handleChangeCorretPassword } = useAppState()
+
   const {
     register,
-    handleSubmit,
-    formState: { errors }
-  } = useForm<any>()
-  const { password: passwordError, repeatedPassword: repeatedPasswordError } =
-    errors
+    formState: { errors, isValid }
+  } = useForm<any>({ mode: 'onChange' })
+  console.log('🚀 ~ file: index.tsx ~ line 21 ~ isValid', isValid)
+  const {
+    password: passwordError,
+    repeatedPassword: repeatedPasswordError,
+    secretHelpText: secretHelpTextError
+  } = errors
+
+  useEffect(() => {
+    if (isValid) handleChangeCorretPassword(true)
+  }, [isValid])
+
   return (
-    <form onSubmit={handleSubmit(handleSubmit((e) => console.log({ e })))}>
+    <form>
       <TextArticle contentText={t('instructions.firstText')} />
       <PasswordsFormWrapper>
         <FormInput
@@ -41,7 +52,7 @@ const CreatePasswordForm: FC = () => {
         label={t('form.secretHelpText')}
         register={register}
         validation={{ maxLength: 255 }}
-        error={repeatedPasswordError}
+        error={secretHelpTextError}
       />
     </form>
   )

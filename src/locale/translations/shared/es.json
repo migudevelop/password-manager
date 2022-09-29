@@ -3,10 +3,11 @@
     "btnCancel": "Cancelar",
     "btnNext": "Siguiente",
     "error": {
-      "isRequired": "{name} is required",
-      "minLength": "{name} does not have the minimum length",
-      "notValidFormat": "{name} does not have a valid format",
-      "notPassedTheValidation": "{name} has not passed the validation"
+      "isRequired": "{{name}} is required",
+      "minLength": "{{name}} does not have the minimum length",
+      "maxLength": "{{name}} does have the maximun length",
+      "notValidFormat": "{{name}} does not have a valid format",
+      "notPassedTheValidation": "{{name}} has not passed the validation"
     }
   }
 }

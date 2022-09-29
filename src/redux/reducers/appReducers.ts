@@ -1,24 +1,16 @@
 import { PayloadAction } from '@reduxjs/toolkit'
 
 export default {
+  resetSteps: (state) => {
+    state.currentStep = 1
+    state.isCorrectPassword = false
+  },
   nextStep: (state) => {
-    const { currentStep } = state
-    return { ...state, currentStep }
+    if (state.currentStep <= state.maxSteps) {
+      state.currentStep++
+    }
   },
-  prevStep: (state) => {
-    const { currentStep } = state
-    return { ...state, currentStep }
-  },
-  chagePassword: (state, action: PayloadAction<string>) => {
-    const { payload = '' } = action
-    return { ...state, password: payload }
-  },
-  chageRepeatPassword: (state, action: PayloadAction<string>) => {
-    const { payload = '' } = action
-    return { ...state, repeatedPassword: payload }
-  },
-  changeSecretHelpText: (state, action: PayloadAction<string>) => {
-    const { payload = '' } = action
-    return { ...state, secretHelpText: payload }
+  changeCorretPassword: (state, action: PayloadAction<boolean>) => {
+    state.isCorrectPassword = action?.payload
   }
 }

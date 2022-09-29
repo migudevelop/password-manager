@@ -2,13 +2,10 @@ import { AppInitialState } from '@src/models/index'
 import { createSlice } from '@reduxjs/toolkit'
 import { appReducers } from '@redux/reducers'
 
-const initialState: AppInitialState = {
-  currentStep: 2,
-  formValues: {
-    password: '',
-    repeatedPassword: '',
-    secretHelpText: ''
-  }
+export const initialState: AppInitialState = {
+  currentStep: 1,
+  maxSteps: 3,
+  isCorrectPassword: false
 }
 
 const appSlicer = createSlice({

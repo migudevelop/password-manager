@@ -7,7 +7,7 @@ const FormGroup: FC<FormGroupProps> = ({ label, name, error, children }) => (
   <FormGroupStyled>
     {label && <LabelStyled htmlFor={name}>{label}</LabelStyled>}
     {children}
-    <FormValidationError name={name} error={error} />
+    {error?.type && <FormValidationError name={name} error={error} />}
   </FormGroupStyled>
 )
 

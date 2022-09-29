@@ -4,7 +4,7 @@ import { LIGHT_THEME, DARK_THEME } from '@styles/themes'
 import { DEFAULT_THEME, LIGHT } from '@shared/constants'
 import { themeReducers } from '@redux/reducers'
 
-const initialState: ThemeInitialState = {
+export const initialState: ThemeInitialState = {
   theme: DEFAULT_THEME === LIGHT ? LIGHT_THEME : DARK_THEME
 }
 
