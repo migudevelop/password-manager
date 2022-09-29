@@ -5,11 +5,7 @@ import { appReducers } from '@redux/reducers'
 export const initialState: AppInitialState = {
   currentStep: 1,
   maxSteps: 3,
-  formValues: {
-    password: '',
-    repeatedPassword: '',
-    secretHelpText: ''
-  }
+  isCorrectPassword: false
 }
 
 const appSlicer = createSlice({

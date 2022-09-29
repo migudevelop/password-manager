@@ -3,10 +3,15 @@ import { MainFooterSectionStyled } from './MainFooterSection.styled'
 import { useTranslation } from 'react-i18next'
 import { Button } from '@components/index'
 import { useAppState } from '@hooks/index'
+import { isDisabledContinueButon } from '@src/shared/helpers/utils'
 
 const MainFooterSection: FC = () => {
   const { t } = useTranslation('shared')
-  const { handleCancel, handleNextStep } = useAppState()
+  const {
+    state: { app },
+    handleCancel,
+    handleNextStep
+  } = useAppState()
   return (
     <MainFooterSectionStyled>
       <Button
@@ -17,6 +22,7 @@ const MainFooterSection: FC = () => {
       <Button
         className="secondary"
         text={t('btnNext')}
+        disabled={isDisabledContinueButon(app)}
         onClick={handleNextStep}
       />
     </MainFooterSectionStyled>

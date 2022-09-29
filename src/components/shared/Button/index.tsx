@@ -2,8 +2,19 @@ import { FC, memo } from 'react'
 import { ButtonStyled } from './Button.styled'
 import { ButtonProps, ButtonPropTypes } from '@models/index'
 
-const Button: FC<ButtonProps> = ({ text, className, onClick, disabled }) => (
-  <ButtonStyled className={className} onClick={onClick} disabled={disabled}>
+const Button: FC<ButtonProps> = ({
+  type,
+  text,
+  className,
+  onClick,
+  disabled
+}) => (
+  <ButtonStyled
+    className={className}
+    type={type}
+    onClick={onClick}
+    disabled={disabled}
+  >
     {text}
   </ButtonStyled>
 )

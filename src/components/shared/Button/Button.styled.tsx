@@ -4,7 +4,7 @@ import { ButtonStyledProps } from '@models/index'
 const primaryClass = css`
   &.primary {
     background: ${({ theme }) => theme.primaryColor};
-    color: ${({ theme }) => theme.terciaryColor};
+    color: ${({ theme }) => theme.backgroundColor};
   }
 `
 const secondaryClass = css`
@@ -35,6 +35,7 @@ export const ButtonStyled = styled.button<ButtonStyledProps>`
   border: none;
   border-radius: 3px;
   text-transform: capitalize;
+  user-select: none;
   cursor: pointer;
   ${primaryClass}
   ${secondaryClass}

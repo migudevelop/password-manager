@@ -1,8 +1,9 @@
 import PropTypes, { InferProps } from 'prop-types'
 
 export const ButtonPropTypes = {
+  type: PropTypes.string,
   text: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
   disabled: PropTypes.bool,
   className: PropTypes.oneOf([
     'primary',

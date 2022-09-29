@@ -1,4 +1,4 @@
-import { StepState } from '@models/index'
+import { AppInitialState, StepState } from '@models/index'
 
 export const obtainedStepState = (
   step: number,
@@ -12,3 +12,8 @@ export const obtainedStepState = (
   }
   return StepState.NOT_STATE
 }
+
+export const isDisabledContinueButon = ({
+  currentStep,
+  isCorrectPassword
+}: AppInitialState): boolean => currentStep === 2 && !isCorrectPassword
