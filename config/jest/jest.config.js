@@ -20,5 +20,8 @@ module.exports = {
     '^@redux/(.*)$': '<rootDir>/src/redux/$1',
     '^@shared/(.*)$': '<rootDir>/src/shared/$1',
     '^@styles/(.*)$': '<rootDir>/src/styles/$1'
+  },
+  transform: {
+    '\\.[jt]sx?$': 'babel-jest'
   }
 }
