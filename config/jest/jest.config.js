@@ -1,6 +1,5 @@
 module.exports = {
   rootDir: '../../',
-  preset: 'ts-jest',
   verbose: true,
   setupFilesAfterEnv: ['<rootDir>/config/jest/jest.setup.js'],
   testRegex: '.*[-.]test\\.tsx?$',
