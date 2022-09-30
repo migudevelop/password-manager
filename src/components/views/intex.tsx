@@ -1,3 +1,5 @@
 export { default as CreatePasswordForm } from './CreatePassword/CreatePasswordForm'
+export { default as MessageStateIcon } from './Feedback/MessageStateIcon'
+export { default as MessageState } from './Feedback/MessageState'
 export { default as Image } from './ProductInformation/Image'
 export { default as ImagesSection } from './ProductInformation/ImageSection'

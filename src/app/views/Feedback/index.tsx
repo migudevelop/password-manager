@@ -1,26 +1,14 @@
 import { memo, FC } from 'react'
 import { useTranslation } from 'react-i18next'
-import {
-  Layout,
-  MainSection,
-  ImagesSection,
-  TextArticle
-} from '@components/index'
+import { Layout, MainSection, MessageState } from '@components/index'
+import { MessageStates } from '@models/index'
 
 const ProductInformation: FC = () => {
-  const { t } = useTranslation('productInformation')
+  const { t } = useTranslation('feedback')
   return (
     <Layout>
       <MainSection title={t('title')}>
-        <ImagesSection />
-        <TextArticle
-          title={t('howWork.title')}
-          contentText={t('howWork.contentText')}
-        />
-        <TextArticle
-          title={t('dataToSave.title')}
-          contentText={t('dataToSave.contentText')}
-        />
+        <MessageState state={MessageStates.SUCCESS} />
       </MainSection>
     </Layout>
   )

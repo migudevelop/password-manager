@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 import { appReducers } from '@redux/reducers'
 
 export const initialState: AppInitialState = {
-  currentStep: 1,
+  currentStep: 3,
   maxSteps: 3,
   isCorrectPassword: false
 }
