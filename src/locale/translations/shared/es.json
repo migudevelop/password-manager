@@ -2,6 +2,8 @@
   "shared": {
     "btnCancel": "Cancelar",
     "btnNext": "Siguiente",
+    "access": "Acceder",
+    "returnPasswordManager": "Volver a Password Managger",
     "error": {
       "isRequired": "{{name}} is required",
       "minLength": "{{name}} does not have the minimum length",

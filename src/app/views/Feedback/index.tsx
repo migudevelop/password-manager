@@ -1,14 +1,15 @@
 import { memo, FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Layout, MainSection, MessageState } from '@components/index'
-import { MessageStates } from '@models/index'
+import { useAppState } from '@hooks/index'
 
 const ProductInformation: FC = () => {
   const { t } = useTranslation('feedback')
+  const { state } = useAppState()
   return (
     <Layout>
       <MainSection title={t('title')}>
-        <MessageState state={MessageStates.SUCCESS} />
+        <MessageState state={state.app.feedbackState} />
       </MainSection>
     </Layout>
   )

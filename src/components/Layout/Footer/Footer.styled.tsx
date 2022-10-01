@@ -10,6 +10,6 @@ export const FooterWrapper = styled.footer`
     padding: 1rem 15rem;
   }
   ${MEDIAQUERIES.desktop} {
-    padding: 1rem 20rem;
+    padding: 2rem 20rem;
   }
 `

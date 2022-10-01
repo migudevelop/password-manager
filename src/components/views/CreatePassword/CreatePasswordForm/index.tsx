@@ -8,13 +8,13 @@ import { useAppState } from '@src/hooks'
 
 const CreatePasswordForm: FC = () => {
   const { t } = useTranslation('createPassword')
-  const { handleChangeCorretPassword } = useAppState()
+  const { handleChangeFormData } = useAppState()
 
   const {
     register,
+    getValues,
     formState: { errors, isValid }
   } = useForm<any>({ mode: 'onChange' })
-  console.log('🚀 ~ file: index.tsx ~ line 21 ~ isValid', isValid)
   const {
     password: passwordError,
     repeatedPassword: repeatedPasswordError,
@@ -22,7 +22,7 @@ const CreatePasswordForm: FC = () => {
   } = errors
 
   useEffect(() => {
-    if (isValid) handleChangeCorretPassword(true)
+    if (isValid) handleChangeFormData(true, getValues())
   }, [isValid])
 
   return (

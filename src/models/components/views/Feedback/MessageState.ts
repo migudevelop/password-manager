@@ -2,7 +2,8 @@ import PropTypes, { InferProps } from 'prop-types'
 
 export enum MessageStates {
   SUCCESS = 'success',
-  ERROR = 'error'
+  ERROR = 'error',
+  NO_MESSAGE = ''
 }
 
 export const MessageStatePropTypes = {
