@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import ProgressSteps from './index'
+import { ProgressSteps } from '@components/index'
 
 describe('ProgressSteps', () => {
   test('Render component', () => {

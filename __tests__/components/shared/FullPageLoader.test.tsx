@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import FullPageLoader from './index'
+import { FullPageLoader } from '@components/index'
 
 describe('FullPageLoader', () => {
   test('Render component', () => {

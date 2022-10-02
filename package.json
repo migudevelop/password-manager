@@ -21,7 +21,7 @@
     "build": "webpack --mode=development --config ./config/webpack/webpack.dev.js",
     "start": "react-scripts start",
     "start:dev": "webpack serve --mode=development --config ./config/webpack/webpack.dev.js",
-    "test": "jest --watchAll=false --config ./config/jest/jest.config.js --colors",
+    "test": "jest --watchAll=false --config ./config/jest/jest.config.js --colors --passWithNoTests",
     "test:watch": "jest --watch --config ./config/jest/jest.config.js --colors",
     "test:coverage": "jest --coverage --config=./config/jest/jest.config.js --colors",
     "lint": "eslint .",

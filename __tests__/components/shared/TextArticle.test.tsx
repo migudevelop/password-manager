@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import TextArticle from './index'
+import { TextArticle } from '@components/index'
 
 describe('TextArticle', () => {
   test('Render component with contentText and without title', () => {

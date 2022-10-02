@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react'
-import LoaderSpinner from './index'
+import { LoaderSpinner } from '@components/index'
+import '@locale/i18next-config'
 
 describe('LoaderSpinner', () => {
   test('Render component', () => {
