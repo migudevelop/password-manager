@@ -1,0 +1,13 @@
+{
+  "feedback": {
+    "title": "Estado de la solicutid",
+    "success": {
+      "title": "¿Tú Password Manager ya está creado!",
+      "contentText": "Hemos podido modificar tu Contraseña Maestra, muchas gracias por utilizar este servicio."
+    },
+    "error": {
+      "title": "Ha habido un error",
+      "contentText": "No hemos podido modificar tu Contraseña Maestra, intentálo más tarde"
+    }
+  }
+}

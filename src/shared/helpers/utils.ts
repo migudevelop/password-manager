@@ -15,5 +15,10 @@ export const obtainedStepState = (
 
 export const isDisabledContinueButon = ({
   currentStep,
-  isCorrectPassword
-}: AppInitialState): boolean => currentStep === 2 && !isCorrectPassword
+  isValidForm
+}: AppInitialState): boolean => currentStep === 2 && !isValidForm
+
+export const isLastStep = ({
+  currentStep,
+  maxSteps
+}: AppInitialState): boolean => currentStep === maxSteps

@@ -1,27 +1,25 @@
 import { memo, FC } from 'react'
-import { useTranslation } from 'react-i18next'
+// import { useTranslation } from 'react-i18next'
 import {
   Layout,
-  MainSection,
-  ImagesSection,
-  TextArticle
+  // MainSection,
+  // MessageState,
+  LoaderSpinner
 } from '@components/index'
+import { useAppState } from '@hooks/index'
 
 const ProductInformation: FC = () => {
-  const { t } = useTranslation('productInformation')
+  // const { t } = useTranslation('feedback')
+  const { state } = useAppState()
   return (
     <Layout>
-      <MainSection title={t('title')}>
-        <ImagesSection />
-        <TextArticle
-          title={t('howWork.title')}
-          contentText={t('howWork.contentText')}
-        />
-        <TextArticle
-          title={t('dataToSave.title')}
-          contentText={t('dataToSave.contentText')}
-        />
-      </MainSection>
+      {state?.app?.isLoading && <LoaderSpinner />}
+      {!state?.app?.isLoading && (
+        <LoaderSpinner />
+        // <MainSection title={t('title')}>
+        //   <MessageState state={state?.app?.feedbackState} />
+        // </MainSection>
+      )}
     </Layout>
   )
 }

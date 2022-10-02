@@ -11,7 +11,7 @@ export const FigureStyled = styled.figure`
     margin-bottom: 0.5rem;
   }
 `
-export const ImageStyled = styled.img`
+export const ImageStyled = styled.div`
   margin-bottom: 1rem;
 `
 export const ImageTextStyled = styled.summary`

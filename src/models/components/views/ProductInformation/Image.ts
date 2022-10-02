@@ -1,7 +1,7 @@
 import PropTypes, { InferProps } from 'prop-types'
 
 export const ImagePropTypes = {
-  src: PropTypes.string.isRequired,
+  imageToDisplay: PropTypes.node.isRequired,
   text: PropTypes.string
 }
 
