@@ -40,6 +40,7 @@ const extraReducers = (builder): any => {
     state.feedbackState = MessageStates.SUCCESS
   })
   builder.addCase(getIsCorrectPassword.rejected, (state) => {
+    state.isLoading = false
     state.feedbackState = MessageStates.ERROR
   })
 }

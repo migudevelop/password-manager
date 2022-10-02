@@ -1,8 +1,8 @@
 import { memo, FC } from 'react'
-import { LoaderSpinnerStyledProps } from '@models/index'
+import { SvgSpinnerStyledProps } from '@models/index'
 import { SvgSpinnerStyled } from '../Svg.styled'
 
-const SvgSpinner: FC<LoaderSpinnerStyledProps> = ({ size }) => (
+const SvgSpinner: FC<SvgSpinnerStyledProps> = ({ size }) => (
   <SvgSpinnerStyled
     size={size}
     xmlns="http://www.w3.org/2000/svg"

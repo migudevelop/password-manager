@@ -1,5 +1,6 @@
-import styled, { keyframes } from 'styled-components'
-import { LoaderSpinnerStyledProps, LoaderSpinnerSizes } from '@models/index'
+import styled, { keyframes, css } from 'styled-components'
+import { MEDIAQUERIES } from '@styles/helpers'
+import { SvgSpinnerStyledProps, LoaderSpinnerSizes } from '@models/index'
 
 export const SvgStyled = styled.svg`
   width: 50%;
@@ -14,8 +15,8 @@ const spin = keyframes`
   }
 `
 
-export const SvgSpinnerStyled = styled.svg`
-  width: ${({ size }: LoaderSpinnerStyledProps) => {
+const SpinnerSize = css`
+  ${({ size }: SvgSpinnerStyledProps) => {
     switch (size) {
       case LoaderSpinnerSizes.LARGE_BUTTON:
         return '1.5vw;'
@@ -27,6 +28,15 @@ export const SvgSpinnerStyled = styled.svg`
         return '5vw;'
     }
   }};
+`
+
+export const SvgSpinnerStyled = styled.svg`
+  width: ${({ size }: SvgSpinnerStyledProps) => (size ? SpinnerSize : '15vw')};
   color: ${({ theme }) => theme.secondaryColor};
   animation: ${spin} 2s linear infinite;
+  ${MEDIAQUERIES.tablet} {
+  }
+  ${MEDIAQUERIES.tablet} {
+    width: ${({ size }: SvgSpinnerStyledProps) => (size ? SpinnerSize : '5vw')};
+  }
 `

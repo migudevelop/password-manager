@@ -4,6 +4,7 @@
     "btnNext": "Siguiente",
     "access": "Acceder",
     "returnPasswordManager": "Volver a Password Managger",
+    "loadingText": "Loading...",
     "error": {
       "isRequired": "{{name}} is required",
       "minLength": "{{name}} does not have the minimum length",

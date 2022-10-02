@@ -7,15 +7,19 @@ export enum LoaderSpinnerSizes {
 }
 
 export const LoaderSpinnerPropTypes = {
+  text: PropTypes.string,
+  showText: PropTypes.bool,
   size: PropTypes.oneOf([
     LoaderSpinnerSizes.SMALL_BUTTON,
     LoaderSpinnerSizes.MEDIUM_BUTTON,
     LoaderSpinnerSizes.LARGE_BUTTON
-  ]).isRequired
+  ])
 }
 
-export type LoaderSpinnerProps = InferProps<typeof LoaderSpinnerPropTypes>
+export type LoaderSpinnerProps = InferProps<typeof LoaderSpinnerPropTypes> & {
+  size?: LoaderSpinnerSizes
+}
 
-export interface LoaderSpinnerStyledProps {
+export interface SvgSpinnerStyledProps {
   size?: LoaderSpinnerSizes
 }
