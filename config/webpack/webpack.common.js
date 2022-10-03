@@ -8,7 +8,7 @@ const htmlWebpackPlugin = new HtmlWebPackPlugin({
 
 module.exports = (_env, { mode }) => {
   const fileNameWithHash =
-    mode === 'production' ? '[name].[Contenthash:8]' : '[name].[hash:8]'
+    mode === 'production' ? '[name].[Contenthash:8]' : '[name].[fullhash:8]'
 
   return {
     devtool: 'inline-source-map',
@@ -19,7 +19,8 @@ module.exports = (_env, { mode }) => {
       path: path.resolve('build'),
       filename: `static/js/${fileNameWithHash}.chunk.js`,
       libraryTarget: 'umd',
-      publicPath: '/'
+      publicPath: '/',
+      clean: true
     },
     optimization: {
       splitChunks: {
