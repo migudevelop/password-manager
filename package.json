@@ -1,6 +1,7 @@
 {
   "name": "openbank-test",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "author": "Miguel Martínez",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "1.8.5",
