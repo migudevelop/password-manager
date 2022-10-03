@@ -1,14 +1,10 @@
-import { render, screen } from '@testing-library/react'
-import { ComponentWithRedux } from '@shared/helpers/testsUtils'
+import { screen } from '@testing-library/react'
+import { renderWithRedux } from '@shared/helpers/testsUtils'
 import ProductInformation from '@app/views/ProductInformation/index'
 
 describe('ProductInformation', () => {
   test('Render component', () => {
-    render(
-      <ComponentWithRedux>
-        <ProductInformation />
-      </ComponentWithRedux>
-    )
+    renderWithRedux(<ProductInformation />)
     expect(screen.getByText(/Siguiente/i)).toBeInTheDocument()
   })
 })

@@ -7,7 +7,11 @@ export enum MessageStates {
 }
 
 export const MessageStatePropTypes = {
-  state: PropTypes.oneOf([MessageStates.SUCCESS, MessageStates.ERROR])
+  state: PropTypes.oneOf([
+    MessageStates.SUCCESS,
+    MessageStates.ERROR,
+    MessageStates.NO_MESSAGE
+  ])
 }
 
 export type MessageStateProps = InferProps<typeof MessageStatePropTypes>

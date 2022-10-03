@@ -16,6 +16,7 @@ const FormInput: FC<FormInputProps> = ({
 }) => (
   <FormGroup name={name} label={label} error={error}>
     <InputStyled
+      data-testid={name}
       type={type}
       {...register(name, validation)}
       placeholder={placeholder}
