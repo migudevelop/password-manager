@@ -8,7 +8,7 @@ const htmlWebpackPlugin = new HtmlWebPackPlugin({
 
 module.exports = (_env, { mode }) => {
   const fileNameWithHash =
-    mode === 'production' ? '[name].[Contenthash:8]' : '[name].[fullhash:8]'
+    mode === 'production' ? '[name].[contenthash:8]' : '[name].[fullhash:8]'
 
   return {
     devtool: 'inline-source-map',
