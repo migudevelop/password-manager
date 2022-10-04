@@ -44,19 +44,11 @@ module.exports = (_env, { mode }) => {
         },
         {
           test: /\.(svg|gif|png|jpg|jpeg|ico)$/i,
-          loader: 'file-loader',
-          options: {
-            outputPath: 'static/media/images',
-            name: `${fileNameWithHash}.[ext]`
-          }
+          type: 'asset/resource'
         },
         {
           test: /\.(woff2?|ttf|eot)$/i,
-          loader: 'file-loader',
-          options: {
-            outputPath: 'static/media/fonts',
-            name: `${fileNameWithHash}.[ext]`
-          }
+          type: 'asset/resource'
         }
       ]
     },
