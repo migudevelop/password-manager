@@ -8,6 +8,7 @@ module.exports = (env, cofig) =>
     mode: 'development',
     devServer: {
       port,
-      open: true
+      open: true,
+      historyApiFallback: true
     }
   })

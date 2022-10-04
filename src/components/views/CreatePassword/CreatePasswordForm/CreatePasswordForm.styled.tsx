@@ -11,7 +11,7 @@ export const PasswordsFormWrapper = styled.section`
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 10rem;
   }
-  ${MEDIAQUERIES.tablet} {
+  ${MEDIAQUERIES.desktop} {
     grid-column-gap: 20rem;
   }
 `

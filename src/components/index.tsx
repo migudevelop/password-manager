@@ -1,4 +1,5 @@
 export * from './form/index'
 export * from './Layout'
+export { default as Routers } from './router'
 export * from './shared'
 export * from './views/intex'
