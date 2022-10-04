@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
 		width: 100vw;
 		height: 100vh;
 		background: ${({ theme }: ThemeInitialState) => theme.backgroundColor};
+		font-family: sans-serif;
 		#root{
 			height: 100%;
 			display: flex;

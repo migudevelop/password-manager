@@ -2,7 +2,7 @@
 
 Me he centrado en desarrollar siguiendo las prácticas que suelo utilizar en mi día a día e intentando extender en la medida que el tiempo me lo ha permitido las funcionalidades establecidas en el documento. He intentado implementar de la manera más correcta la lógica interna del problema propuesto, con la estructura de carpetas que normalmente uso para proyectos de React, como por ejemplo la separación de componentes y de páginas.
 
-Como añadido a las funcionalidades propuestas se ha implementado un formulario de registro que permite añadir una contraseña junto con una frase secreta opcional. En el ultimo paso se realiza una llamada asincrona.
+Como añadido a las funcionalidades propuestas se han añadido los archivos de configuración necesario para correr la aplicación en las ultimas versiones de las dependencias. Se ha implementado un formulario que permite añadir una contraseña junto con una frase secreta opcional. En el ultimo paso se realiza una llamada asincrona.
 
 La carga de las páginas se ha hecho mediante _lazy load_ permitiendo mostrar una precarga sencilla para mejorar la experiencia del usuario. Todas las imágenes usadas estan en formato SVG lo que permite estilarlas desde el código y optimizar su carga.
 
@@ -31,7 +31,7 @@ Para poder probar la aplicación podemos poner cualquier contraseña que está n
 
 ## Formato del código
 
-Para asegurar la calidad del codigo y evitar errores se ha hecho uso de las librerías **ESLint** y **Prettier**, configurandolas de manera optima para su uso con React. También se ha instalado **Lint Staged** y **Husky** para poder lanzar scripts antes de poder subir commits al repositorio, en este caso se ejecutará ESLint, prettier y todos los test que haya en el proyecto para comprobar que todo esta correcto. Además se ha añadido _commintlint_ para comprobar que los commits siguen el formato de conventional commits.
+Para asegurar la calidad del codigo y evitar errores se ha hecho uso de las librerías **ESLint** y **Prettier**, configurandolas de manera optima para su uso con React. También se ha instalado **Lint Staged** y **Husky** para poder lanzar scripts antes de poder subir commits al repositorio, en este caso se ejecutará ESLint, prettier y todos los test que haya en el proyecto para comprobar que todo esta correcto. Además se ha añadido **Commitlint** para comprobar que los commits siguen el formato de conventional commits.
 
 ## Scripts
 
@@ -72,12 +72,12 @@ Se han implementado tests a modo de demostación tanto para componentes como par
 Hay varias librerías que se han instalado para dar características extra al proyecto:
 
 - prop-types: evita errores a la hora de programar y asegura la consistencia del código
-- eslint-plugin-testing-library: configura ESLint para seguir las mejores practicas y anticipar errores comunes al programar tests
--react-testing-library: para realizar los tests unitarios.
+- react-testing-library: para realizar los tests unitarios.
 
 ## ToDo
 
 Por falta de tiempo han quedado pendientes los siguientes puntos 😊:
 
 - añadir más tests
-- añadir los colores para el tema _dark_mode_.
+- añadir los colores para el tema _dark_mode_
+- reemplazar tipos _any_ por sus tipos correctos

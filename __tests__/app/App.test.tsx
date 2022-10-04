@@ -10,22 +10,17 @@ import App from '@app/App'
 
 const PASSWORD: string = 'passwordOK1'
 
-const waitSpinner = async (): Promise<any> =>
-  await waitForElementToBeRemoved(() => screen.getByText(/Spinner/i), {
-    timeout: 4000
-  })
-
 const obtainedNextButton = async (): Promise<any> =>
   await waitFor(() => screen.getByText(/Siguiente/i))
 
 describe('App', () => {
   test('Render component and simulate app stepts', async () => {
     renderWithRedux(<App />)
-    await waitSpinner()
+    await waitForElementToBeRemoved(() => screen.getByText(/Spinner/i))
     const nextButton = await obtainedNextButton()
     expect(nextButton).toBeInTheDocument()
     await fireEvent.click(nextButton)
-    await waitSpinner()
+    await waitForElementToBeRemoved(() => screen.getByText(/Spinner/i))
     const secondPage = await screen.getByText(/Crea tu Contraseña Maestra/i)
     expect(secondPage).toBeInTheDocument()
     await fireEvent.click(screen.getByText(/Cancelar/i))
@@ -51,7 +46,9 @@ describe('App', () => {
       await waitFor(() => expect(secretHelpText).toHaveValue(PASSWORD))
     })
     await fireEvent.click(await obtainedNextButton())
-    await waitSpinner()
+    await waitForElementToBeRemoved(() => screen.getByText(/Spinner/i), {
+      timeout: 4000
+    })
     expect(
       await screen.getByText(/¡Tú Password Manager ya está creado!/i)
     ).toBeInTheDocument()
